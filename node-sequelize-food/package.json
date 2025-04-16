@@ -1,0 +1,28 @@
+{
+  "name": "sequelize-food",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev2": "node --watch server.js",
+    "dev": "nodemon --import=extensionless/register server.js",
+    "start": "node --import=extensionless/register server.js",
+    "generate:models": "npx sequelize-auto -h localhost -p 3307 -d Food_App -u root -x 1234 -e mysql -o ./src/models -l esm -a ./src/common/sequelize/additional.json --caseModel p --caseProp c --caseFile p"
+  },
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "extensionless": "^1.9.9",
+    "mysql2": "^3.13.0",
+    "sequelize": "^6.37.6",
+    "sequelize-auto": "^0.8.8",
+    "sequelize-food": "file:"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
